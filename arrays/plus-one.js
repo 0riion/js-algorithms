@@ -1,19 +1,17 @@
-// https://leetcode.com/problems/plus-one/
-
 /**
  * @param {number[]} digits
  * @return {number[]}
  */
-var plusOne = function (digits) {
-	const n = digits.length;
+const plusOne = (digits) => {
+	const numDigits = digits.length;
 
-	for (let i = n - 1; i >= 0; i--) {
-		digits[i]++;
+	for (let index = numDigits - 1; index >= 0; index--) {
+		digits[index]++;
 
-		if (digits[i] < 10) {
+		if (digits[index] < 10) {
 			return digits;
 		} else {
-			digits[i] = 0;
+			digits[index] = 0;
 		}
 	}
 

@@ -1,2 +1,5 @@
-[1,31,2,23].sort((a, b) => a - b); // [1,2,23,31];
-[1,31,2,23].sort((a, b) => b - a); // [31,23,2,1];
+const targetValue = 5;
+const arr1 = [1,3,5,6];
+const indexNext = arr1.findIndex((item) => item > targetValue) || arr1.length;
+const indexPrev = arr1.findIndex((item) => item < targetValue) || 0;
+console.log(`${arr1[indexPrev]}, ${targetValue}, ${arr1[indexNext]}`);
