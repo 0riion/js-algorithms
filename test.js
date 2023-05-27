@@ -1,5 +1,8 @@
-const targetValue = 5;
-const arr1 = [1,3,5,6];
-const indexNext = arr1.findIndex((item) => item > targetValue) || arr1.length;
-const indexPrev = arr1.findIndex((item) => item < targetValue) || 0;
-console.log(`${arr1[indexPrev]}, ${targetValue}, ${arr1[indexNext]}`);
+
+function sum(arr) {
+    const sorted = arr.sort((a, b) => a - b);
+    return sorted[0] + sorted[sorted.length - 1];
+};
+
+console.log(sum([1, 2, 3, 4, 43, 7, 8, 9, 10])); // 11
+
